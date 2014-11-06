@@ -1,0 +1,14 @@
+<table class="table table-bordered table-striped table-hover">
+	<tr>
+		<th>Receipt No</th>
+		<th></th>
+	</tr>
+	<%@takeaway_orders.each do |order|%>
+		<%if order.is_takeaway%>
+		<tr>
+			<td><%=order.receiptno%></td>
+			<td><%=link_to 'Show Receipt',order_bill_path(:id=>order.id)%></td>
+		</tr>
+		<%end%>
+	<%end%>
+</table>

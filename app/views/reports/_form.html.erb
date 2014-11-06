@@ -1,0 +1,12 @@
+<%= form_tag('/reports',{:id=>"new_report"}) do %>
+<p>
+	<label>To</label>
+	<%=text_field_tag 'to',nil,:class=>"form-control",:placeholder=>"YYYY-MM-DD eg 2014-10-09"%>
+</p>
+<p>
+	<label>From</label>
+	<%=text_field_tag 'from',nil,:class=>"form-control",:placeholder=>"YYYY-MM-DD eg 2014-10-09"%>
+</p>
+  <div><%= submit_tag 'Generate Report',:class=>"form-control btn btn-primary" %></div>
+<% end %>
+
